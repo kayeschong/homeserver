@@ -8,9 +8,9 @@ services:
       TZ: Asia/Singapore
       # - PASSWORD=password # Login password for the Web UI (Optional)
       # - SUDO_PASSWORD=password # Sudo password (Optional)
-      DEFAULT_WORKSPACE: ./config/workspace
+      DEFAULT_WORKSPACE: "/config/workspace"
     volumes:
-      - ./config:/config
+      - "./config:/config"
     ports:
       - 8443:8443
     restart: unless-stopped
