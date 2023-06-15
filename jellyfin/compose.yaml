@@ -10,8 +10,8 @@ services:
     volumes:
       - "./config:/config"
       - "./transcode:/transcode"
-      - "~/media/Shows:/data/shows"
-      - "~/media/Movies:/data/movies"
+      - "~/Public/Shows:/data/shows"
+      - "~/Public/Movies:/data/movies"
     ports:
       - 8096:8096
       - 8920:8920 #optional

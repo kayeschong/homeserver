@@ -6,11 +6,11 @@ services:
       PUID: 1000
       PGID: 1000
       TZ: Asia/Singapore
-      # - PASSWORD=password # Login password for the Web UI (Optional)
-      # - SUDO_PASSWORD=password # Sudo password (Optional)
+      PASSWORD: ${PASSWORD} # Login password for the Web UI (Optional)
       DEFAULT_WORKSPACE: "/config/workspace"
     volumes:
       - "./config:/config"
+      - "~/homeserver:/config/workspace/homeserver"
     ports:
       - 8443:8443
     restart: unless-stopped
